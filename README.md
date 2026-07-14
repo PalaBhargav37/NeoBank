@@ -1,130 +1,299 @@
-# NeoBank
+# 🏦 NeoBank
 
-NeoBank is a modern full-stack digital banking application designed to simulate real-world banking operations. The project combines a powerful Spring Boot backend with a responsive Angular frontend to provide users with a complete online banking experience, including account management, transactions, payments, loans, rewards, notifications, and an administrative dashboard.
+A modern **Full-Stack Digital Banking Application** built using **Spring Boot** and **Angular**. NeoBank simulates real-world banking operations by providing secure authentication, account management, transactions, loans, budgeting, rewards, notifications, and an admin dashboard.
 
-## 🌟 Overview
+---
 
-This project was built to showcase a practical banking system with both customer-facing and admin-facing features. It demonstrates how a modern web application can manage secure user authentication, financial operations, and administrative control in a scalable architecture.
+## 📖 Overview
 
-## ✨ Key Features
+NeoBank is designed to demonstrate a complete banking system with separate customer and administrator functionalities. It follows industry-standard development practices with a layered architecture, RESTful APIs, JWT authentication, and a responsive Angular frontend.
 
-### Customer Features
-- User registration and secure login
-- Dashboard with account summary
-- Account creation and management
-- Fund transfer between accounts
-- Deposit and withdrawal operations
-- Transaction history and tracking
-- Bill payments
-- Budget planning and monitoring
-- Loan requests and management
-- Rewards and loyalty features
-- Profile management
-- Notifications center
+This project showcases:
 
-### Admin Features
-- Manage users
-- Manage accounts
-- Monitor transactions
-- Review bills and payments
-- Control loans and deposits
-- View withdrawals and system health
-- Audit logs and administrative insights
+- Secure authentication using JWT
+- Banking operations and transaction management
+- Admin management system
+- Responsive UI with Angular
+- REST API integration
+- MySQL database connectivity
 
-## 🧰 Tech Stack
+---
 
-### Backend
+## ✨ Features
+
+### 👤 Customer Features
+
+- User Registration & Login
+- Secure JWT Authentication
+- Dashboard Overview
+- Account Creation & Management
+- Deposit & Withdrawal
+- Fund Transfer
+- Transaction History
+- Bill Payments
+- Budget Planning
+- Loan Requests
+- Rewards & Loyalty Program
+- Notifications
+- Profile Management
+
+---
+
+### 👨‍💼 Admin Features
+
+- Manage Users
+- Manage Accounts
+- Monitor Transactions
+- Bill & Payment Management
+- Loan Approval & Management
+- Deposit & Withdrawal Monitoring
+- System Dashboard
+- Audit Logs
+
+---
+
+# 🛠 Tech Stack
+
+## Backend
+
 - Java 17
-- Spring Boot 3.5.11
+- Spring Boot 3.x
 - Spring Security
 - Spring Data JPA
-- MySQL Database
 - JWT Authentication
 - Maven
+- MySQL
 
-### Frontend
-- Angular 21
+## Frontend
+
+- Angular
 - TypeScript
+- HTML5
+- CSS3
 - RxJS
-- HTML/CSS
 - Angular Routing
 
-## 🏗️ Architecture
+---
 
-The application follows a layered architecture:
+# 🏗 Architecture
 
-- Frontend: Angular-based client application
-- Backend: RESTful APIs built with Spring Boot
-- Database: MySQL for persistent storage
-- Security: JWT-based authentication and authorization
+```
+Angular Frontend
+       │
+       ▼
+Spring Boot REST APIs
+       │
+       ▼
+Spring Security (JWT)
+       │
+       ▼
+MySQL Database
+```
 
-## 📁 Project Structure
+---
 
+# 📂 Project Structure
 
-Bhargav_NeoBank/
+```
+NeoBank/
+│
 ├── Backend/
-│   └── src/main/java/com/neobank
+│   ├── src/
+│   ├── pom.xml
+│   └── mvnw
+│
 ├── frontend/
-│   └── src/app
+│   ├── src/
+│   ├── package.json
+│   └── angular.json
+│
 └── README.md
+```
 
-⚙️ Installation and Setup
-Prerequisites
-Make sure you have the following installed:
+---
 
-Java 17+
-Maven
-Node.js and npm
-MySQL
-1. Clone the Repository
+# ⚙ Installation
+
+## Prerequisites
+
+Install the following:
+
+- Java 17 or above
+- Maven
+- Node.js
+- npm
+- MySQL
+
+---
+
+## 1️⃣ Clone Repository
+
+```bash
 git clone https://github.com/your-username/Bhargav_NeoBank.git
+
 cd Bhargav_NeoBank
-2. Backend Setup
+```
+
+---
+
+## 2️⃣ Backend Setup
+
+```bash
 cd Backend
-./mvnw spring-boot:run
-For Windows:
+
+mvn spring-boot:run
+```
+
+### Windows
+
+```bash
 cd Backend
+
 mvnw.cmd spring-boot:run
+```
 
-3. Frontend Setup
+---
+
+## 3️⃣ Frontend Setup
+
+```bash
 cd frontend
-npm install
-npm start
 
-4. Database Configuration
-Open the backend configuration file and update your MySQL connection settings:
+npm install
+
+ng serve
+```
+
+---
+
+## 4️⃣ Database Configuration
+
+Update the following file:
+
+```
 Backend/src/main/resources/application.properties
+```
+
 Example:
+
+```properties
 spring.datasource.url=jdbc:mysql://localhost:3306/neobank
 spring.datasource.username=root
 spring.datasource.password=your_password
 
-▶️ Running the Application
-Once both backend and frontend are running:
+spring.jpa.hibernate.ddl-auto=update
+```
 
-Frontend: http://localhost:4200
-Backend API: http://localhost:8080
-🔐 Authentication
-The application uses JWT-based authentication for secure access to protected endpoints. Users can log in and receive a token that authorizes them to interact with the system.
+---
 
-📊 Application Modules
-Authentication Module
-User Profile Module
-Account Module
-Transaction Module
-Payment Module
-Budget Module
-Loan Module
-Rewards Module
-Notification Module
-Admin Module
-🤝 Contributing
-Contributions are welcome. If you want to improve the project, please fork the repository and submit a pull request with your changes.
+# ▶ Running the Application
 
-📄 License
-This project is intended for educational, learning, and demonstration purposes.
+After starting both backend and frontend:
 
-👨‍💻 Author
-Bhargav_NeoBank
+Frontend
 
+```
+http://localhost:4200
+```
 
+Backend
+
+```
+http://localhost:8080
+```
+
+---
+
+# 🔐 Authentication
+
+NeoBank uses **JWT (JSON Web Token)** authentication.
+
+After successful login:
+
+- User receives a JWT Token
+- Token is required to access secured APIs
+- Spring Security validates every request
+
+---
+
+# 📦 Application Modules
+
+- Authentication Module
+- User Module
+- Profile Module
+- Account Module
+- Transaction Module
+- Transfer Module
+- Deposit Module
+- Withdrawal Module
+- Bill Payment Module
+- Budget Module
+- Loan Module
+- Rewards Module
+- Notification Module
+- Admin Module
+
+---
+
+# 🚀 Future Enhancements
+
+- Email Notifications
+- SMS Alerts
+- OTP Verification
+- UPI Payments
+- Credit Card Module
+- Fixed Deposits
+- Investment Dashboard
+- Analytics Dashboard
+- Multi-language Support
+- Mobile Application
+
+---
+
+# 🤝 Contributing
+
+Contributions are welcome.
+
+1. Fork the repository
+
+2. Create your feature branch
+
+```bash
+git checkout -b feature-name
+```
+
+3. Commit your changes
+
+```bash
+git commit -m "Added new feature"
+```
+
+4. Push to your branch
+
+```bash
+git push origin feature-name
+```
+
+5. Create a Pull Request
+
+---
+
+# 📜 License
+
+This project is developed for **educational, learning, and portfolio purposes**.
+
+---
+
+# 👨‍💻 Author
+
+**Bhargav Pala**
+
+GitHub:
+https://github.com/PalaBhargav37
+
+LinkedIn:
+https://www.linkedin.com/in/bhargav-pala/
+
+---
+
+⭐ If you like this project, consider giving it a **Star** on GitHub!
