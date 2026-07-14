@@ -1,0 +1,17 @@
+{
+	"version": "2.0.0",
+	"tasks": [
+		{
+			"label": "Start NeoBank Backend",
+			"type": "shell",
+			"command": "java",
+			"args": [
+				"@c:\\Users\\pala.TRN\\Downloads\\POC\\Backend\\target\\jvm-args.txt",
+				"com.neobank.BackendApplication"
+			],
+			"isBackground": true,
+			"problemMatcher": [],
+			"group": "build"
+		}
+	]
+}
